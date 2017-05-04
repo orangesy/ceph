@@ -1,3 +1,4 @@
+use_existing_cluster: true
 tasks:
 - install:
 #- ceph:
