@@ -1,4 +1,5 @@
 use_existing_cluster: true
+modify_fstab: false
 overrides:
   ceph:
     conf:
