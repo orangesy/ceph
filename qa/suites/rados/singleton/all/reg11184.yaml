@@ -17,5 +17,7 @@ overrides:
 
 tasks:
 - install:
-- ceph:
+#- ceph:
 - reg11184:
+modify_fstab: false
+use_existing_cluster: true

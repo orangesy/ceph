@@ -10,3 +10,5 @@ tasks:
     client.0:
       - mkdir $TESTDIR/ostest && cd $TESTDIR/ostest && ceph_test_objectstore --gtest_filter=-*/2
       - rm -rf $TESTDIR/ostest
+modify_fstab: false
+use_existing_cluster: true

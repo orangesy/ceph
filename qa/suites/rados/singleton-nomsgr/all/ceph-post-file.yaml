@@ -6,3 +6,5 @@ tasks:
     clients:
       all:
         - post-file.sh
+modify_fstab: false
+use_existing_cluster: true

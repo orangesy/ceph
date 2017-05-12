@@ -6,3 +6,5 @@ tasks:
     client.0:
       - mkdir $TESTDIR/kvtest && cd $TESTDIR/kvtest && ceph_test_keyvaluedb
       - rm -rf $TESTDIR/kvtest
+modify_fstab: false
+use_existing_cluster: true

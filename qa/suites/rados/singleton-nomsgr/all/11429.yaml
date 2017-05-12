@@ -40,8 +40,8 @@ tasks:
 - install:
     branch: v0.80.8
 - print: '**** done installing firefly'
-- ceph:
-    fs: xfs
+#- ceph:
+#    fs: xfs
 - print: '**** done ceph'
 - full_sequential:
   - ceph_manager.create_pool:
@@ -133,3 +133,5 @@ tasks:
   - ceph.restart: [osd.0, osd.1, osd.2]
   - ceph_manager.wait_for_clean: null
   - print: '**** done verifying final upgrade'
+modify_fstab: false
+use_existing_cluster: true

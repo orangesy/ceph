@@ -19,3 +19,5 @@ overrides:
     conf:
       client:
         debug ms: 20
+modify_fstab: false
+use_existing_cluster: true

@@ -11,7 +11,7 @@ openstack:
       size: 10 # GB
 tasks:
 - install:
-- ceph:
+#- ceph:
 - mon_thrash:
     revive_delay: 20
     thrash_delay: 1
@@ -23,3 +23,5 @@ tasks:
       LOADGEN_NUM_OSDS: "5"
       VERBOSE: "1"
       DURATION: "600"
+modify_fstab: false
+use_existing_cluster: true

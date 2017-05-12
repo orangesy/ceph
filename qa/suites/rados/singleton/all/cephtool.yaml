@@ -12,14 +12,16 @@ openstack:
       size: 10 # GB
 tasks:
 - install:
-- ceph:
-    log-whitelist:
-    - wrongly marked me down
-    - had wrong client addr
-    - had wrong cluster addr
-    - must scrub before tier agent can activate
+#- ceph:
+#    log-whitelist:
+#    - wrongly marked me down
+#    - had wrong client addr
+#    - had wrong cluster addr
+#    - must scrub before tier agent can activate
 - workunit:
     clients:
       all:
         - cephtool
         - mon/pool_ops.sh
+modify_fstab: false
+use_existing_cluster: true

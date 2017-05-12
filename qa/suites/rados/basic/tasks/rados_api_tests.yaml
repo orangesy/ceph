@@ -5,10 +5,12 @@ overrides:
     - wrongly marked me down
 tasks:
 - install:
-- ceph:
+#- ceph:
 - workunit:
     clients:
       client.0:
         - rados/test.sh
         - rados/test_pool_quota.sh
 
+modify_fstab: false
+use_existing_cluster: true

@@ -9,14 +9,14 @@ roles:
   - osd.5
 tasks:
 - install:
-- ceph:
-    conf:
-      osd:
-        osd debug reject backfill probability: .3
-        osd min pg log entries: 25
-        osd max pg log entries: 100
-        osd max object name len: 460
-        osd max object namespace len: 64
+#- ceph:
+#    conf:
+#      osd:
+#        osd debug reject backfill probability: .3
+#        osd min pg log entries: 25
+#        osd max pg log entries: 100
+#        osd max object name len: 460
+#        osd max object namespace len: 64
 - exec:
     client.0:
       - sudo ceph osd pool create foo 64
@@ -30,3 +30,5 @@ tasks:
       - sudo ceph osd in 0 1
 - sleep:
     duration: 60
+modify_fstab: false
+use_existing_cluster: true

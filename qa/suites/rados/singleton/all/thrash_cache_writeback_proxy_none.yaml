@@ -13,10 +13,10 @@ openstack:
       size: 30 # GB
 tasks:
 - install:
-- ceph:
-    log-whitelist:
-    - wrongly marked me down
-    - slow request
+#- ceph:
+#    log-whitelist:
+#    - wrongly marked me down
+#    - slow request
 - exec:
     client.0:
       - sudo ceph osd pool create base 4
@@ -64,3 +64,5 @@ tasks:
       write: 100
       delete: 50
       copy_from: 50
+modify_fstab: false
+use_existing_cluster: true

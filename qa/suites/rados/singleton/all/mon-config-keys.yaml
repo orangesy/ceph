@@ -12,8 +12,10 @@ openstack:
       size: 10 # GB
 tasks:
 - install:
-- ceph:
+#- ceph:
 - workunit:
     clients:
       all:
         - mon/test_mon_config_key.py
+modify_fstab: false
+use_existing_cluster: true

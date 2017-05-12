@@ -14,13 +14,13 @@ openstack:
 tasks:
 - install:
     branch: infernalis
-- ceph:
-    log-whitelist:
-    - objects unfound and apparently lost
-    - wrongly marked me down
-    - objects unfound and apparently lost
-    - log bound mismatch
-    - failed to encode
+#- ceph:
+#    log-whitelist:
+#    - objects unfound and apparently lost
+#    - wrongly marked me down
+#    - objects unfound and apparently lost
+#    - log bound mismatch
+#    - failed to encode
 - install.upgrade:
     mon.a:
 - print: "upgraded mon.a and friends"
@@ -28,3 +28,5 @@ tasks:
     daemons: [mon.a, mon.b, mon.c, osd.0, osd.1, osd.2]
 - ec_lost_unfound:
     parallel_bench: false
+modify_fstab: false
+use_existing_cluster: true

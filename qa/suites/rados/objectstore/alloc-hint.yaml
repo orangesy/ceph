@@ -14,8 +14,10 @@ overrides:
 
 tasks:
 - install:
-- ceph:
+#- ceph:
 - workunit:
     clients:
       all:
         - rados/test_alloc_hint.sh
+modify_fstab: false
+use_existing_cluster: true

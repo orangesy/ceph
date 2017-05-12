@@ -1,4 +1,6 @@
 tasks:
 - install:
-- ceph:
+#- ceph:
 - mon_recovery:
+modify_fstab: false
+use_existing_cluster: true

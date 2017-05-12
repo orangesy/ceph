@@ -7,3 +7,5 @@ tasks:
       all:
         - objectstore/test_fuse.sh
 
+modify_fstab: false
+use_existing_cluster: true

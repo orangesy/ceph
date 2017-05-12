@@ -6,9 +6,11 @@ openstack:
     size: 10 # GB
 tasks:
 - install:
-- ceph:
-    fs: xfs
-    conf:
-      global:
-        journal aio: true
+#- ceph:
+#    fs: xfs
+#    conf:
+#      global:
+#        journal aio: true
 - filestore_idempotent:
+modify_fstab: false
+use_existing_cluster: true

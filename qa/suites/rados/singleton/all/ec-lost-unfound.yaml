@@ -12,7 +12,9 @@ openstack:
       size: 10 # GB
 tasks:
 - install:
-- ceph:
-    log-whitelist:
-    - objects unfound and apparently lost
+#- ceph:
+#    log-whitelist:
+#    - objects unfound and apparently lost
 - ec_lost_unfound:
+modify_fstab: false
+use_existing_cluster: true

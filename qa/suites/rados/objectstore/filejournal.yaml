@@ -6,8 +6,10 @@ openstack:
     size: 10 # GB
 tasks:
 - install:
-- ceph:
-    fs: xfs
+#- ceph:
+#    fs: xfs
 - exec:
     client.0:
       - ceph_test_filejournal
+modify_fstab: false
+use_existing_cluster: true

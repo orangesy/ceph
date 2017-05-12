@@ -2,11 +2,11 @@ roles:
 - [mon.0, mds.a, osd.0, osd.1, osd.2, client.0, client.1]
 tasks:
 - install:
-- ceph:
-    conf:
-      global:
-        osd max object name len: 460
-        osd max object namespace len: 64
+#- ceph:
+#    conf:
+#      global:
+#        osd max object name len: 460
+#        osd max object namespace len: 64
 - exec:
     client.0:
     - ceph osd pool create data_cache 4
@@ -40,3 +40,5 @@ tasks:
       - hexdump -C /tmp/foo | head
       - hexdump -C $TESTDIR/mnt.1/foo | head
       - cmp $TESTDIR/mnt.1/foo /tmp/foo
+modify_fstab: false
+use_existing_cluster: true

@@ -6,9 +6,11 @@ openstack:
     size: 10 # GB
 tasks:
 - install:
-- ceph:
-    fs: xfs
+#- ceph:
+#    fs: xfs
 - workunit:
     clients:
       all:
         - osdc/stress_objectcacher.sh
+modify_fstab: false
+use_existing_cluster: true

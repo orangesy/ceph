@@ -1,7 +1,9 @@
 tasks:
 - install:
-- ceph:
+#- ceph:
 - workunit:
     clients:
       client.0:
         - cls
+modify_fstab: false
+use_existing_cluster: true

@@ -1,3 +1,5 @@
 tasks:
 - install:
-- ceph:
+#- ceph:
+modify_fstab: false
+use_existing_cluster: true

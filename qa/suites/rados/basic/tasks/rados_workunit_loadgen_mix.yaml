@@ -4,8 +4,10 @@ overrides:
     - wrongly marked me down
 tasks:
 - install:
-- ceph:
+#- ceph:
 - workunit:
     clients:
       all:
         - rados/load-gen-mix.sh
+modify_fstab: false
+use_existing_cluster: true

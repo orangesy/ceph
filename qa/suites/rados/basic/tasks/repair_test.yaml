@@ -21,6 +21,8 @@ overrides:
         filestore debug inject read err : true
 tasks:
 - install:
-- ceph:
+#- ceph:
 - repair_test:
 
+modify_fstab: false
+use_existing_cluster: true

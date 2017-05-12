@@ -41,8 +41,8 @@ tasks:
 - install:
     branch: hammer
 - print: '**** done installing hammer'
-- ceph:
-    fs: xfs
+#- ceph:
+#    fs: xfs
 - print: '**** done ceph'
 - ceph_manager.create_pool:
     args: ['test']
@@ -101,3 +101,5 @@ tasks:
 - sleep:
     duration: 30
 - ceph_manager.wait_for_clean: null
+modify_fstab: false
+use_existing_cluster: true

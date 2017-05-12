@@ -19,5 +19,7 @@ overrides:
         osd deep scrub update digest min age: 0
 tasks:
 - install:
-- ceph:
+#- ceph:
 - scrub_test:
+modify_fstab: false
+use_existing_cluster: true

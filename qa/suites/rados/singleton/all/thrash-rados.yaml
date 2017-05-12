@@ -13,9 +13,9 @@ openstack:
       size: 10 # GB
 tasks:
 - install:
-- ceph:
-    log-whitelist:
-    - wrongly marked me down
+#- ceph:
+#    log-whitelist:
+#    - wrongly marked me down
 - thrashosds:
     op_delay: 30
     clean_interval: 120
@@ -24,3 +24,5 @@ tasks:
     clients:
       all:
       - rados/load-gen-mix-small.sh
+modify_fstab: false
+use_existing_cluster: true

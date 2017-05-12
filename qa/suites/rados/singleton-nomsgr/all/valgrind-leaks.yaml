@@ -17,5 +17,7 @@ roles:
 - [mon.0, osd.0, osd.1, client.0]
 tasks:
 - install:
-- ceph:
-    expect_valgrind_errors: true
+#- ceph:
+#    expect_valgrind_errors: true
+modify_fstab: false
+use_existing_cluster: true

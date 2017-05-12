@@ -8,7 +8,9 @@ openstack:
       size: 10 # GB
 tasks:
 - install:
-- ceph:
-    log-whitelist:
-    - wrongly marked me down
+#- ceph:
+#    log-whitelist:
+#    - wrongly marked me down
 - dump_stuck:
+modify_fstab: false
+use_existing_cluster: true
