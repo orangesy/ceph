@@ -1,7 +1,9 @@
+modify_fstab: false
+use_existing_cluster: true
 tasks:
 - install:
-- ceph:
-    conf:
-      client:
-        rbd cache: true
-        rbd cache max dirty: 0
+#- ceph:
+#    conf:
+#      client:
+#        rbd cache: true
+#        rbd cache max dirty: 0
